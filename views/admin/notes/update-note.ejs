@@ -1,0 +1,10 @@
+<%- include ('../../shared/includes/head' ,{pageTitle:'Update Notes' })%>
+<link rel="stylesheet" href="/styles/forms.css">
+</head>
+<body>
+    <%- include ('../../shared/includes/header') %>
+    <main>
+<h1>Update Note</h1>
+<%- include('includes/note-form',{submitPath:'/admin/notes/'+ note.id , note:note}) %>
+    </main>  
+<%- include ('../../shared/includes/footer') %>

@@ -1,0 +1,16 @@
+<article class="note-item">
+  <img src="<%= note.pdfUrl %>" alt="<%= note.title %>" />
+  <h2><%= note.title %></h2>
+  <div class="note-item-content">
+    <div class="note-item-actions">
+      <a class="btn btn-alt" href="/admin/notes/<%= note.id %>"
+        >View and edit <i class="fa-solid fa-eye"></i>
+      </a>
+      <p>
+        <button class="btn btn-alt">
+          Delete <i class="fa-solid fa-trash"></i>
+        </button>
+      </p>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,19 @@
+.note-item {
+  padding: var(--space-4);
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(6, 38, 71);
+}
+
+#notes-grid {
+  margin: var(--space-8) auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--space-4);
+}
+
+.note-item-content h2{
+    font-size: 1.25rem;
+    margin: var(--space-2);
+}
+

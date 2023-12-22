@@ -1,0 +1,15 @@
+<%- include ('../../shared/includes/head' ,{pageTitle:'Add new Notes' })%>
+<link rel="stylesheet" href="/styles/forms.css">
+</head>
+<body>
+    <%- include ('../../shared/includes/header') %>
+    <main>
+<h1>Add new Note</h1>
+<%- include('includes/note-form',{submitPath:'/admin/notes',note:{
+    title:'',
+    subject:'',
+    semester:'',
+    description:'',
+}}) %>
+    </main>  
+<%- include ('../../shared/includes/footer') %>

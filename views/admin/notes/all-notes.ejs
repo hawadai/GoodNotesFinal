@@ -1,0 +1,24 @@
+<%- include('../../shared/includes/head', { pageTitle: 'All Notes' }) %>
+<link rel="stylesheet" href="/styles/notes.css">
+</head>
+<body>
+  <%- include('../../shared/includes/header') %>
+  <main>
+    <h1>Note Administration</h1>
+    <section>
+      <h2>Manage Notes</h2>
+      <p>
+        <a href="/admin/notes/new" class="btn">Add Note</a>
+      </p>
+    </section>
+    <section>
+      <ul id="notes-grid">
+        <% for (const note of notes) { %>
+          <li>
+            <%- include('includes/note-item', { note: note }) %>
+          </li>
+        <% } %>
+      </ul>
+    </section>
+  </main>
+<%- include('../../shared/includes/footer') %>

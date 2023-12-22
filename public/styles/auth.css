@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+form {
+  max-height: 38rem;
+  max-width: 30rem;
+  margin: var(--space-8) auto;
+  padding: var(--space-4);
+  background-color: rgb(7, 36, 76);
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 4px 7px rgb(255, 167, 86);
+  text-align: center;
+}
+form a {
+  color: var(--color-primary-200);
+}
+
+form a:hover,
+form a:active {
+  color: var(--color-primary-400);
+}

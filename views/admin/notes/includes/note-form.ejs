@@ -1,0 +1,27 @@
+<form action= "<%= submitPath %>?_csrf=<%= locals.csrfToken %>" method="POST" enctype="multipart/form-data">
+    <p>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="<%=note.title%>" required>
+    </p>
+    <p>
+        <label for="pdf"><i class="fa-solid fa-upload"></i> Upload</label>
+        <input type="file" id="pdf" name="pdf" accept=".pdf" < required>
+    </p>
+    <p>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" value="<%=note.subject%>"
+        maxlength="50">
+    </p>
+    <p>
+        <label for="semester">Semester</label>
+        <input type="text" id="semester" name="semester" value="<%=note.semester%>"
+        maxlength="5">
+    </p>
+    <label for="description">Description</label>
+        <input type="text" id="description" name="description" rows =5 value="<%=note.description%>"
+        maxlength="250">
+<p>
+    <button type ="reset"class="btn btn-alt">Reset  <i class="fa-solid fa-arrow-rotate-left"></i></button>
+    <button class="btn">Save  <i class="fa-solid fa-floppy-disk"></i></button>
+</p>
+</form>
