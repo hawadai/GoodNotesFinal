@@ -5,6 +5,6 @@
     <%- include ('../../shared/includes/header') %>
     <main>
 <h1>Update Note</h1>
-<%- include('includes/note-form',{submitPath:'/admin/notes/'+ note.id , note:note}) %>
+<%- include('includes/note-form',{submitPath:'/admin/notes/'+ note.id , note:note,pdfRequired:false}) %>
     </main>  
 <%- include ('../../shared/includes/footer') %>

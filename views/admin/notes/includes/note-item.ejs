@@ -2,12 +2,13 @@
   <img src="<%= note.pdfUrl %>" alt="<%= note.title %>" />
   <h2><%= note.title %></h2>
   <div class="note-item-content">
+    <h2><%= product.title %></h2>
     <div class="note-item-actions">
       <a class="btn btn-alt" href="/admin/notes/<%= note.id %>"
         >View and edit <i class="fa-solid fa-eye"></i>
       </a>
       <p>
-        <button class="btn btn-alt">
+        <button class="btn btn-alt" data-noteid="<%= note.id %>" data-csrf="<%= locals.csrfToken %>"></button>
           Delete <i class="fa-solid fa-trash"></i>
         </button>
       </p>

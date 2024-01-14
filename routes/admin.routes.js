@@ -15,5 +15,7 @@ router.get('/notes/:id',adminController.getUpdateNote);
 
 router.post('/notes/:id',pdfUploadMiddleware,adminController.updateNote);
 
+router.delete('/notes/:id', adminController.deleteNote);
+
 
 module.exports = router; 

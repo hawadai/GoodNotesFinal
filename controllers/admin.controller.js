@@ -58,10 +58,22 @@ async function updateNote(req,res,next) {
   res.redirect('/admin/notes');
 }
 
+async function deleteNote(req,res,next){
+  let note;
+  try{
+  note = await Note.findById(req.params.id);
+  await note.remove();
+  }catch(error){
+    return next(error);
+  }
+ res.redirect('/admin/notes');
+}
+
 module.exports = {
   getNotes: getNotes,
   getNewNotes: getNewNotes,
   createNewNotes: createNewNotes,
   getUpdateNote: getUpdateNote,
   updateNote: updateNote,
+  deleteNote:deleteNote,
 };
